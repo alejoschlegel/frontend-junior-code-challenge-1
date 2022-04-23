@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/company/udg-united-digital-group/frontend-junior-code-challenge-1/static/css/main.4599651d.css",
+    "main.js": "/company/udg-united-digital-group/frontend-junior-code-challenge-1/static/js/main.7a7ab67a.js",
+    "static/media/Artikel.csv": "/company/udg-united-digital-group/frontend-junior-code-challenge-1/static/media/Artikel.879223fd51682d6c5453.csv",
+    "index.html": "/company/udg-united-digital-group/frontend-junior-code-challenge-1/index.html",
+    "main.4599651d.css.map": "/company/udg-united-digital-group/frontend-junior-code-challenge-1/static/css/main.4599651d.css.map",
+    "main.7a7ab67a.js.map": "/company/udg-united-digital-group/frontend-junior-code-challenge-1/static/js/main.7a7ab67a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4599651d.css",
+    "static/js/main.7a7ab67a.js"
+  ]
+}
