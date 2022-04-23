@@ -4,33 +4,27 @@
 
 I use the following technologies / frameworks in my project:
 
-- JavaScript / jQuery
-- PHP / Symfony
-- ...
+- JavaScript
+- React
 
-I chose jQuery because ...
+I chose JavaScript because it includes all of the features of a programming language embedded in your web browser and is the dominant client-side scripting language of the Web.
+I chose Redux because it allows me to create large web applications that can change data, without reloading the page. Allowing to make fast, scalable and simple applications.
 
 ## Used 3rd Party Libraries
 
-I use the following 3rd party libraries in my project: (if none, remove the table and explain why)
+I use the following 3rd party libraries in my project:
 
 Name | Reason
 --- | ---
-[moment.js](https://momentjs.com/) | For calculating dates and converting formats.
-[Bootstrap](https://getbootstrap.com/) | Simple RWD framework for designing the front end.
+[PapaParse](https://www.papaparse.com/) | Simple in-browser CSV parser.
 
 ## Installation / Run
-
-Describe how we can check your project locally.
-
-For example:
 
 ---
 
 The following components must be installed locally:
 
 - [nodejs](https://nodejs.org/en/) v13.2.0
-- [.NET Core](https://dotnet.microsoft.com/download) v3.1
 
 To run the project locally, enter the following in the command line / bash:
 
@@ -38,6 +32,6 @@ To run the project locally, enter the following in the command line / bash:
 $ git clone <linktorepository>
 $ cd <repositoryname>
 $ npm install
-$ npm run start
+$ npm start
 ```
 ---

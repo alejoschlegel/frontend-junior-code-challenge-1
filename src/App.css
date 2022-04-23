@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Sharp");
+:root {
+  --white: #ffffff;
+  --gray: #252e34;
+  --gray-light: #eeeeee;
+  --orange: #ff432e;
+  --orange-light: #ffd8c3;
+}
+*{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  appearance: none;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-size: 1.7vh;
+}
+#root{
+  height: 100%;
+  width: 100%;
+}
+span {
+  font-size: 1.7vh;
+}
+
+body {
+  height: 100vh;
+  font-size: 2vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  user-select: none;
+  background: var(--color-black-1);
+  color: var(--color-white-1);
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.app-container {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+}
+
+
+#centralContainer{
+  display: grid;
+  grid-auto-rows: 100%;
+  grid-auto-columns: 100%;
+}
+form {
+  display: flex;
+  display: inline-block;
+}
+
+
+
+/* --------------------------------------------------------- TABLE --------------------------------------------------------- */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+#listHead{
+  position: sticky;
+  top: 0;
+}
+.table_form {
+  width: 100%;
+  height: 85vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.table_form tbody tr:nth-child(even) {
+  background-color: var(--orange-light);
+}
+th,
+td {
+  border: none;
+  text-align: center;
+  padding: 0.5vh;
+}
+th {
+  height: 5vh;
+  background: var(--orange-light);
+}
+.descriptionReadRow{
+  height: 10vh;
+}
+.descriptionReadRow > p{
+  height: 100%;
+  overflow-y: scroll;
+}
+
+/* --------------------------------------------------------- TABLE RIGHT ACTIONS --------------------------------------------------------- */
+.actionsRow,.actionsEditRow{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  gap: 2vh;
+  padding: 0 2vh;
+}
+.actionsEditRow {
+  height: 17vh;
+}
+.actionsRow button, .actionsEditRow button{
+  cursor: pointer;
+  background: transparent;
+}
+.actionsRow button:hover, .actionsEditRow button:hover {
+  text-decoration: underline;
+  color: #ff432e;
+}
+.editableRow{
+  width: 100%;
+}
+.editableCell{
+  width: 9%;
+}
+.editableCell > textarea{
+  width: 100%;
+  height: 15vh;
+  background-color: var(--gray-light);
+  resize: none;
+}
+.BeschreibungCell{
+  width: 26%;
+}
+.BeschreibungCell > textarea{
+  width: 100%;
+  height: 15vh;
+  resize: none;
+  background-color: var(--gray-light);
+}
+
+/* --------------------------------------------------------- TABLE BOTTOM ACTIONS --------------------------------------------------------- */
+.pages{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  padding: 1vh;
+}
+.next, .prev {
+  cursor: pointer;
+  background: transparent;
+}
+.next:hover, .prev:hover{
+  color: var(--orange);
+  text-decoration: underline;
+}
+.pages .left_buttons{
+  display: flex;
+  gap: 1vh;
+  align-items: center;
+}
+#addingButton{
+  padding: 1vh;
+  color: var(--white);
+  background-color: var(--orange);
+  text-align: center;
+  cursor: pointer;
+}
+.pages ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1vh;
+}
+.pageLi{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5vh;
+  height: 5vh;
+}
+.pageLi:hover,.pageCurrentLi:hover{
+  color: var(--orange);
+  text-decoration: underline;
+}
+.pageCurrentLi{
+  border-radius: 50%;
+  background: var(--orange);
+  color: var(--white);
+  transition: 0.8s;
+}
+
+/* --------------------------------------------------------- SEARCH --------------------------------------------------------- */
+.search_container{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding: 1.5vh;
+  width: 100%;
+  background-color: var(--white);
+}
+.search_container h1{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 2.5vh;
+  color: var(--white);
+  background-color: #ff432e;
+  padding: 1vh 2vh;
+  border-radius: 3vh;
+}
+.search_container div {
+  display: flex;
+  align-items: center;
+}
+#searchInput{
+  min-width: 10vw;
+  width: fit-content;
+  height: 5vh;
+  padding: 2vh;
+  background-color: #efefef;
+  
+  border-radius: 2vh;
+}
+#search_button{
+  color: var(--white);
+  background-color: var(--orange);
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 0.5vh;
+}
+#search_button span {
+  padding: 0.5vh;
+  font-size: 3vh;
+}
+#search_button:hover{
+
+  border-top-right-radius: 1vh;
+  border-bottom-right-radius: 1vh;
+  border: 0.2vh solid #b0aeae;
+
+}
+
+/* --------------------------------------------------------- ADD ROW --------------------------------------------------------- */
+.addShow {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 7vh;
+}
+.addHide {
+  display: none;
+}
+.addShow_container {
+  display: flex;
+  width: 100%;
+  background: var(--orange-light);
+}
+.card_addRow {
+  width: 6.25vw;
+}
+.card_addRow textarea {
+  height: 20vh;
+  resize: none;
+  width: 100%;
+  border: var(--orange-light) solid 0.1vh;
+}
+.card_addRow label {
+  padding: 2vh 0.5vh;
+  font-size: 1.5vh;
+  font-weight: bolder;
+  text-align: start;
+}
+.add_toolbar {
+  padding: 1vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; 
+  width: 100%;
+  background: #f5f5f5;
+  font-size: 2vh;
+}
+#addClose {
+  padding: 0.5vh;
+  border-radius: 50%;
+  background-color: #ff432e;
+  color: var(--white);
+  cursor: pointer;
+}
+.add_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: transparent;
+}
+.add_button:hover {
+  color: var(--orange);
+}
+#addClose > p{
+  margin: 2vh 0 0 3vh;
+  color: white;
+  font-size: 1.5vw;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: 0.2s;
+}
+#addClose > p:hover{
+  color: black;
+}
+.addNewInput{
+  height: 5vh;
+  margin: 1vw;
+  border: 0.2vh solid #6f6f6f;
+  background-color: rgba(205, 235, 253, 0.413);
+  padding: 1vh;
+}
+.normalNewWidth{
+  width: 30%;
+  margin: 1vh 1% 1vh 1%;
+}
+.bigNewWidth{
+  width: 50%;
+  height: 10vh;
+  margin: 1vh 25% 1vh 25%;
+  resize: none;
+}
+#addSubmit{
+  width:100%;
+  height: fit-content;
+  padding: 1vh 1vw 1vh 1vw;
+  border-bottom-left-radius: 3vw;
+  border-bottom-right-radius: 3vw;
+  border: 2px solid transparent;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+#addSubmit:hover{
+  border-radius: 0.5vh;
+  border: 2px solid rgba(0, 0, 0, 0.284);
+
+  background-color: rgba(0, 0, 0, 0.284);
+  color: white;
+}
+
+/* --------------------------------------------------------- SCROLLBAR --------------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 0.5vw;
+}
+::-webkit-scrollbar-track {
+  background: var(--orange-light);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--orange);
+  transition: 0.5s;
+}
